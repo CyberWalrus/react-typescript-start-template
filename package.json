@@ -5,6 +5,12 @@
   "repository": "git@github.com:CyberWalrus/react-typescript-start-template.git",
   "author": "Andrey Pakhomov <stonewalrusfan@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack --mode production",
+    "jest": "jest"
+  },
   "dependencies": {
     "@types/react": "16.9.23",
     "@types/react-dom": "16.9.5",
@@ -26,11 +32,13 @@
     "@babel/preset-env": "7.8.7",
     "@babel/preset-react": "7.8.3",
     "@babel/preset-typescript": "7.8.3",
+    "@types/html-webpack-plugin": "3.2.2",
     "@types/node": "13.9.0",
     "@types/webpack": "4.41.7",
     "@types/webpack-dev-server": "3.10.0",
     "@typescript-eslint/eslint-plugin": "^2.22.0",
     "@typescript-eslint/parser": "2.22.0",
+    "babel-loader": "8.0.6",
     "eslint": "6.8.0",
     "eslint-config-airbnb-typescript": "7.0.0",
     "eslint-config-prettier": "6.10.0",
@@ -40,11 +48,13 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "2.5.0",
+    "html-webpack-plugin": "3.2.0",
     "prettier": "1.19.1",
     "ts-loader": "6.2.1",
     "ts-node": "8.6.2",
     "typescript": "3.8.3",
     "webpack": "4.42.0",
+    "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.10.3"
   }
 }
