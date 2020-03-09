@@ -1,9 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* tslint:disable:object-literal-sort-keys */
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import webpack from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import webpackDevServer from 'webpack-dev-server';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const isDevelopment = true;
 
@@ -52,7 +52,7 @@ const webpackConfig = {
     bundle: [root('src/index.tsx')],
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'build'),
     publicPath: '/',
     filename: 'app.[hash].js',
   },
@@ -121,6 +121,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({ hash: false, template: './public/index.html' }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
     new webpack.DefinePlugin(env.stringified),
+    new BundleAnalyzerPlugin(),
   ],
 };
 
